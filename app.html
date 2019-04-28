@@ -13,66 +13,120 @@
 	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
 	<!-- Custom CSS styles file -->
 	<link rel="stylesheet" href="./assets/css/custom.css" />
-	<script>
-		const { remote } = require('electron');
-		window.$ = window.jQuery = require('jquery');
-		const moment = require('moment');
-		const axios = require('axios');
-
-		let data = {}
-
-		const renderPage = () => {
-
-		};
-
-		axios.post('https://videorepo.hannahap.com/api/data', { token: 34725250033 })
-			.then((response) => {
-				data = response.data;
-				console.log(data);
-			}).catch((err) => {
-				console.error(err);
-			});
-	</script>
 </head>
 
 <body>
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-12 mt-5 my-3">
-				<p>Curriculum</p>
-				<p>Class</p>
-				<p>Subcat</p>
-				<div class="form-group">
-					<label for="in-video-name">Video name</label>
-					<input type="text" class="form-control" id="in-video-name" placeholder="Video name">
+	<div class="ui grid container">
+		<div class="doubling one column row x-top-row">
+			<div class="column">
+				<h1><span><img src="assets/img/videorepo.png" /></span>VideoRepo Uploader</h1>
+			</div>
+		</div>
+		<div class="doubling four column row">
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="Video name" id="in-video-name" />
 				</div>
-				<div class="form-group">
-					<label for="in-date">Date recorded</label>
-					<input type="text" class="form-control" id="in-date" placeholder="Date recorded">
+			</div>
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="Date recorded" id="in-date-recorded" />
 				</div>
-
-				<div class="row">
-					<div class="col-md-2">
-						<div class="form-group">
-							<label for="in-lesson">Lesson</label>
-							<input type="text" class="form-control" id="in-lesson" placeholder="Lesson">
-						</div>
+			</div>
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="Unit" id="in-unit" />
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="Lesson" id="in-lesson" />
+				</div>
+			</div>
+		</div>
+		<div class="doubling two column row">
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="Host" id="in-hose" />
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui fluid icon input">
+					<input type="text" placeholder="URL" id="in-url" />
+				</div>
+			</div>
+		</div>
+		<div class="doubling three column row">
+			<div class="column">
+				<div class="ui fluid search selection dropdown">
+					<input type="hidden" name="class" id="in-class" />
+					<i class="dropdown icon"></i>
+					<div class="default text">Class</div>
+					<div class="menu">
+						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
 					</div>
-					<div class="col-md-2">
-						<div class="form-group">
-							<label for="in-unit">Unit</label>
-							<input type="text" class="form-control" id="in-unit" placeholder="Unit">
-						</div>
+				</div>
+			</div>
+			<div class="column">
+				<div class="ui fluid search selection dropdown">
+					<input type="hidden" name="subcategory" id="in-subcategory" />
+					<i class="dropdown icon"></i>
+					<div class="default text">Subcategory</div>
+					<div class="menu">
+						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="in-url">URL</label>
-					<input type="text" class="form-control" id="in-url" placeholder="URL">
+			</div>
+			<div class="column">
+				<div class="ui fluid search selection dropdown">
+					<input type="hidden" name="curriculum" id="in-curriculum" />
+					<i class="dropdown icon"></i>
+					<div class="default text">Curriculum</div>
+					<div class="menu">
+						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
+						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
+						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
+						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
+						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
+						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="in-host">Host</label>
-					<input type="text" class="form-control" id="in-host" placeholder="Host">
+			</div>
+		</div>
+		<div class="doubling two column row">
+			<div class="column">
+				<div class="ui segment fluid">
+					<div class="ui checkbox">
+						<input type="checkbox" name="in-supplemental" id="in-supplmental">
+						<label>Supplemental Lesson</label>
+					</div>
 				</div>
+			</div>
+			<div class="column">
+				<div class="ui segment fluid">
+					<div class="ui checkbox">
+						<input type="checkbox" name="in-general" id="in-general">
+						<label>General Curriculum</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="doubling two column row">
+			<div class="column">
+				<button class="fluid purple ui button">Reset</button>
+			</div>
+			<div class="column">
+				<button class="fluid blue ui button">Submit</button>
 			</div>
 		</div>
 	</div>
@@ -80,11 +134,6 @@
 
 <!-- Scripts for the page -->
 <script src="./assets/js/semantic.min.js"></script>
-<script type="text/javascript">
-	window.$('#navbar-close-icn').click(() => {
-		const window = remote.getCurrentWindow();
-		window.close();
-	});
-</script>
+<script src="./assets/js/app.js"></script>
 
 </html>

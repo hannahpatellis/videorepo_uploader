@@ -5,10 +5,10 @@ const url = require('url');
 let win
 
 const createWindow = () => {
-	win = new BrowserWindow({ width: 1000, height: 830, frame: false });
+	win = new BrowserWindow({ width: 1000, height: 530, frame: false });
 
 	win.loadURL(url.format({
-		pathname: path.join(__dirname, 'index.html'),
+		pathname: path.join(__dirname, 'app.html'),
 		protocol: 'file:',
 		slashes: true
 	}));
