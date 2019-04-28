@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>VideoRepo Uploader</title>
+	<!-- CSS Normalize and Reset -->
+	<link rel="stylesheet" href="./assets/css/normalize.css" />
+	<!-- Semantic - Local -->
+	<link rel="stylesheet" href="./assets/css/semantic.min.css" />
+	<!-- Font Awesome - Local -->
+	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+	<!-- Custom CSS styles file -->
+	<link rel="stylesheet" href="./assets/css/custom.css" />
+	<script>
+		const { remote } = require('electron');
+		window.$ = window.jQuery = require('jquery');
+		const moment = require('moment');
+		const axios = require('axios');
+
+		let data = {}
+
+		const renderPage = () => {
+
+		};
+
+		axios.post('https://videorepo.hannahap.com/api/data', { token: 34725250033 })
+			.then((response) => {
+				data = response.data;
+				console.log(data);
+			}).catch((err) => {
+				console.error(err);
+			});
+	</script>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-12 mt-5 my-3">
+				<p>Curriculum</p>
+				<p>Class</p>
+				<p>Subcat</p>
+				<div class="form-group">
+					<label for="in-video-name">Video name</label>
+					<input type="text" class="form-control" id="in-video-name" placeholder="Video name">
+				</div>
+				<div class="form-group">
+					<label for="in-date">Date recorded</label>
+					<input type="text" class="form-control" id="in-date" placeholder="Date recorded">
+				</div>
+
+				<div class="row">
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="in-lesson">Lesson</label>
+							<input type="text" class="form-control" id="in-lesson" placeholder="Lesson">
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="form-group">
+							<label for="in-unit">Unit</label>
+							<input type="text" class="form-control" id="in-unit" placeholder="Unit">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="in-url">URL</label>
+					<input type="text" class="form-control" id="in-url" placeholder="URL">
+				</div>
+				<div class="form-group">
+					<label for="in-host">Host</label>
+					<input type="text" class="form-control" id="in-host" placeholder="Host">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<!-- Scripts for the page -->
+<script src="./assets/js/semantic.min.js"></script>
+<script type="text/javascript">
+	window.$('#navbar-close-icn').click(() => {
+		const window = remote.getCurrentWindow();
+		window.close();
+	});
+</script>
+
+</html>

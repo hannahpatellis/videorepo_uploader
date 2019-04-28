@@ -1,0 +1,18 @@
+{
+  "name": "videorepo_uploader",
+  "version": "1.0.0",
+  "description": "Video repository uploader for Hannah Patellis' instructional videos",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Alexandria 'Hannah' Isadora Patellis",
+  "devDependencies": {
+    "electron": "~1.6.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1"
+  }
+}
