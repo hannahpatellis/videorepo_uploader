@@ -1,5 +1,18 @@
 div.x-top-row {
-    margin-top: 55px;
+    margin-top: 20px;
     padding-bottom: 8px;
     border-bottom: 1px solid black;
+}
+div.x-top-row img {
+    margin-right: 20px;
+}
+select#in-subcategories {
+    height:125px;
+}
+div#exit-icon-wrap {
+    z-index: 1000;
+    font-size: 30px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
 }

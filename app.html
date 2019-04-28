@@ -2,138 +2,222 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>VideoRepo Uploader</title>
-	<!-- CSS Normalize and Reset -->
-	<link rel="stylesheet" href="./assets/css/normalize.css" />
-	<!-- Semantic - Local -->
-	<link rel="stylesheet" href="./assets/css/semantic.min.css" />
-	<!-- Font Awesome - Local -->
-	<link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-	<!-- Custom CSS styles file -->
-	<link rel="stylesheet" href="./assets/css/custom.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>VideoRepo Uploader</title>
+  <!-- CSS Normalize and Reset -->
+  <link rel="stylesheet" href="./assets/css/normalize.css" />
+  <!-- Semantic - Local -->
+  <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+  <!-- Custom CSS styles file -->
+  <link rel="stylesheet" href="./assets/css/custom.css" />
 </head>
 
 <body>
-	<div class="ui grid container">
-		<div class="doubling one column row x-top-row">
-			<div class="column">
-				<h1><span><img src="assets/img/videorepo.png" /></span>VideoRepo Uploader</h1>
-			</div>
-		</div>
-		<div class="doubling four column row">
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="Video name" id="in-video-name" />
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="Date recorded" id="in-date-recorded" />
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="Unit" id="in-unit" />
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="Lesson" id="in-lesson" />
-				</div>
-			</div>
-		</div>
-		<div class="doubling two column row">
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="Host" id="in-hose" />
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid icon input">
-					<input type="text" placeholder="URL" id="in-url" />
-				</div>
-			</div>
-		</div>
-		<div class="doubling three column row">
-			<div class="column">
-				<div class="ui fluid search selection dropdown">
-					<input type="hidden" name="class" id="in-class" />
-					<i class="dropdown icon"></i>
-					<div class="default text">Class</div>
-					<div class="menu">
-						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
-						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
-						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid search selection dropdown">
-					<input type="hidden" name="subcategory" id="in-subcategory" />
-					<i class="dropdown icon"></i>
-					<div class="default text">Subcategory</div>
-					<div class="menu">
-						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
-						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
-						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid search selection dropdown">
-					<input type="hidden" name="curriculum" id="in-curriculum" />
-					<i class="dropdown icon"></i>
-					<div class="default text">Curriculum</div>
-					<div class="menu">
-						<div class="item" data-value="af"><i class="af flag"></i>Afghanistan</div>
-						<div class="item" data-value="ax"><i class="ax flag"></i>Aland Islands</div>
-						<div class="item" data-value="al"><i class="al flag"></i>Albania</div>
-						<div class="item" data-value="dz"><i class="dz flag"></i>Algeria</div>
-						<div class="item" data-value="as"><i class="as flag"></i>American Samoa</div>
-						<div class="item" data-value="ad"><i class="ad flag"></i>Andorra</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="doubling two column row">
-			<div class="column">
-				<div class="ui segment fluid">
-					<div class="ui checkbox">
-						<input type="checkbox" name="in-supplemental" id="in-supplmental">
-						<label>Supplemental Lesson</label>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui segment fluid">
-					<div class="ui checkbox">
-						<input type="checkbox" name="in-general" id="in-general">
-						<label>General Curriculum</label>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="doubling two column row">
-			<div class="column">
-				<button class="fluid purple ui button">Reset</button>
-			</div>
-			<div class="column">
-				<button class="fluid blue ui button">Submit</button>
-			</div>
-		</div>
-	</div>
+  <div class="container-fluid">
+    
+    <div id="exit-icon-wrap"><a href="#" id="exit-icon">✖️</a></div>
+
+    <div class="row x-top-row">
+      <div class="col">
+        <h1><span><img src="assets/img/videorepo.png" /></span>VideoRepo Uploader</h1>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-video-name" placeholder="Video name">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-date-recorded" placeholder="Date (YY-MM-DD)">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-unit" placeholder="Unit">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-lesson" placeholder="Lesson">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-host" placeholder="Host">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input type="text" class="form-control" id="in-url" placeholder="URL">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="in-course-code">Course code</label>
+          <select class="form-control" id="in-course-code"></select>
+        </div>
+        <div class="form-group">
+          <label for="in-curriculum">Curriculum</label>
+          <select class="form-control" id="in-curriculum"></select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="in-subcategories">Subcategories</label>
+          <select multiple class="form-control" id="in-subcategories"></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="ui segment fluid">
+          <div class="ui checkbox">
+            <input type="checkbox" name="in-supplemental" id="in-supplemental">
+            <label>Supplemental Lesson</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-5">
+      <div class="col">
+        <button type="button" class="btn btn-secondary btn-lg btn-block" id="btn-reset">Reset</button>
+      </div>
+      <div class="col">
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-submit">Submit</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const { remote } = require('electron');
+    window.$ = window.jQuery = require('jquery');
+    const axios = require('axios');
+    const fs = require('fs');
+    const path = require('path');
+    const homedir = require('os').homedir();
+    
+    let config = {};
+
+    fs.readFile(path.join(homedir, '/config/config.json'), 'utf8', (err, data) => {
+      config = JSON.parse(data);
+      startApp();
+    });
+
+    let data = {}
+
+    const renderPageFromData = data => {
+      const classes = data.classes;
+      const curricula = data.curricula;
+      const subcategories = data.subcategories;
+
+      classes.forEach((e, i) => {
+        let newOption = window.$('<option>');
+        newOption.text(e.text);
+        newOption.attr('value', e.key);
+        window.$('#in-course-code').append(newOption);
+      });
+
+      curricula.forEach((e, i) => {
+        let newOption = window.$('<option>');
+        newOption.text(e.text);
+        newOption.attr('value', e.key);
+        window.$('#in-curriculum').append(newOption);
+      });
+
+      subcategories.forEach((e, i) => {
+        let newOption = window.$('<option>');
+        newOption.text(e.text);
+        newOption.attr('value', e.key);
+        window.$('#in-subcategories').append(newOption);
+      });
+    };
+
+    const startApp = () => {
+      axios.post(`${config.DOMAINROOT}api/data`, { token: config.TOKEN })
+        .then(response => {
+          data = response.data;
+          renderPageFromData(data);
+        }).catch(err => {
+          console.error(err);
+        });
+    }
+
+    window.$('#btn-reset').on('click', (e) => {
+      e.preventDefault();
+      window.$('#in-video-name').val('');
+      window.$('#in-date-recorded').val('');
+      window.$('#in-unit').val('');
+      window.$('#in-lesson').val('');
+      window.$('#in-host').val('');
+      window.$('#in-url').val('');
+      window.$('#in-subcategories option:selected').prop('selected', false);
+      window.$('#in-supplemental').prop('checked', false);
+      window.$('#btn-submit').attr('disabled', false);
+    });
+
+    window.$('#btn-submit').on('click', e => {
+      e.preventDefault();
+
+      const unit = window.$('#in-supplemental').prop('checked') ? '0' : window.$('#in-unit').val();
+      const lesson = window.$('#in-supplemental').prop('checked') ? '0' : window.$('#in-lesson').val();
+
+      if (
+        window.$('#in-video-name').val().length > 0 &&
+        window.$('#in-date-recorded').val().length === 8 &&
+        unit.length > 0 &&
+        lesson.length > 0 &&
+        window.$('#in-host').val().length > 0 &&
+        window.$('#in-url').val().length > 0 &&
+        window.$('#in-subcategories').val().length > 0
+      ) {
+        const newEntry = {
+          "name": window.$('#in-video-name').val(),
+          "date": window.$('#in-date-recorded').val(),
+          "unit": parseInt(unit),
+          "lesson": parseInt(lesson),
+          "host": window.$('#in-host').val().toLowerCase(),
+          "url": window.$('#in-url').val(),
+          "class": window.$('#in-course-code').val(),
+          "curriculum": window.$('#in-curriculum').val(),
+          "subcategory": window.$('#in-subcategories').val(),
+        };
+
+        axios.post(`${config.DOMAINROOT}api/new`, { entry: newEntry, token: config.APIKEY })
+          .then(response => {
+            if (response.data.success === true) {
+              alert('Video added 💾');
+            } else if (response.data.success === false) {
+              alert(`Oh shit 🤬\n${response.data.error}`);
+            } else {
+              alert(`Oh double shit 🤬🤬\nUnknown error occured`);
+            }
+          }).catch(err => {
+            alert(`Oh shit 🤬🤬\nCouldn't make the POST request to the server`);
+            console.error(err);
+          });
+      } else {
+        alert('Make sure to fill out all the fields 🙃');
+      }
+    });
+
+    window.$('a#exit-icon').on('click', () => {
+      const window = remote.getCurrentWindow();
+      window.close();
+    });
+  </script>
+
 </body>
-
-<!-- Scripts for the page -->
-<script src="./assets/js/semantic.min.js"></script>
-<script src="./assets/js/app.js"></script>
-
 </html>

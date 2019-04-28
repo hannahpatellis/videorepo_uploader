@@ -2,10 +2,10 @@ const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
-let win
+let win;
 
 const createWindow = () => {
-	win = new BrowserWindow({ width: 1000, height: 530, frame: false });
+	win = new BrowserWindow({ width: 1000, height: 600, frame: false, webPreferences: { nodeIntegration: true } });
 
 	win.loadURL(url.format({
 		pathname: path.join(__dirname, 'app.html'),
@@ -17,7 +17,7 @@ const createWindow = () => {
 		win = null;
 		app.quit();
 	});
-}
+};
 
 app.on('ready', createWindow);
 
