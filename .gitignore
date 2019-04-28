@@ -1,6 +1,8 @@
 .DS_Store
 config.json
 
+/release-builds
+
 # Logs
 logs
 *.log
