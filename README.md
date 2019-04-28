@@ -34,4 +34,4 @@ To build the application, run `yarn build` in the application directory. Current
 
 ## VideoRepo Server and Frontend
 
-Uploader is the backend application for adding new videos to the database. You can find the VideoRepo server and the frontend web app [here (hannahvideos)](https://github.com/hannahpatellis/hannahvideos).
+Uploader is the backend application for adding new videos to the database. You can find the VideoRepo server and the frontend web app [here (hannahpatellis/videorepo)](https://github.com/hannahpatellis/videorepo).
