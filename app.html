@@ -111,7 +111,7 @@
     
     let config = {};
 
-    fs.readFile(path.join(homedir, '/config/config.json'), 'utf8', (err, data) => {
+    fs.readFile(path.join(homedir, '/config/videorepo_uploader.json'), 'utf8', (err, data) => {
       config = JSON.parse(data);
       startApp();
     });
